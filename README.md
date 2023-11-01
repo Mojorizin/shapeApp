@@ -1,7 +1,6 @@
 # shapeApp
 A school assignment to learn about abstract classes, inheritance, and polymorphism. 
 
---------------------Assignment Requirements--------------------
 Create an abstract class "Shape" with the following specifications:
 
 An abstract method "surface_area ()" of return type double
