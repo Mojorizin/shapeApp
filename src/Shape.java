@@ -54,3 +54,34 @@ class Cylinder extends Shape {
         return format;
     }
 }
+
+class Cone extends Shape {
+    double coneHeight;
+    double coneRadius;
+
+    @Override
+    double surface_area() {
+        double coneArea;
+        coneArea = Math.PI * coneRadius * (coneRadius + Math.sqrt(Math.pow(coneHeight, 2) + Math.pow(coneRadius, 2)));
+        return coneArea;
+    }
+
+    @Override
+    double volume() {
+        double coneVolume;
+        coneVolume = Math.PI * Math.pow(coneRadius, 2) * coneHeight/3;
+        return coneVolume;
+    }
+    public Cone(double coneHeight, double coneRadius) {
+        this.coneHeight = coneHeight;
+        this.coneRadius = coneRadius;
+    }
+
+    @Override
+    public String toString() {
+        String format;
+        format = format("The area of the cone is: %.2f square inches.\n" +
+                "The volume of the cone is: %.2f cubic inches.", surface_area(), volume());
+        return format;
+    }
+}
